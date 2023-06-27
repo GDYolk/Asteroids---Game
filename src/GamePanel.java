@@ -55,8 +55,9 @@ public class GamePanel extends JPanel implements Runnable{
         g.drawLine(screenWidth/2, 0, screenWidth/2, screenHeight);
         g.drawLine(0, screenHeight/2, screenWidth, screenHeight/2);
 
-        // PLANE MOVETO
         g.setColor(Color.white);
-        g.drawPolygon(new int[]{plane.x1, plane.x2, plane.x3},new int[]{plane.y1, plane.y2, plane.y3}, 3);
+        // PLANE MOVETO
+        g.drawPolygon(new int[]{plane.p1.x, plane.p2.x, plane.p3.x},new int[]{plane.p1.y, plane.p2.y, plane.p3.y}, 3);
+
     }
 }
