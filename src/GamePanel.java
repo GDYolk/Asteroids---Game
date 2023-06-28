@@ -2,8 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class GamePanel extends JPanel implements Runnable{
-    public final int screenWidth = 700;
-    public final int screenHeight = 500;
+    public static final int screenWidth = 700;
+    public static final int screenHeight = 500;
     final int FPS = 30; // frames per second
 
     Thread gameThread;
@@ -55,9 +55,6 @@ public class GamePanel extends JPanel implements Runnable{
         g.drawLine(screenWidth/2, 0, screenWidth/2, screenHeight);
         g.drawLine(0, screenHeight/2, screenWidth, screenHeight/2);
 
-        g.setColor(Color.white);
-        // PLANE MOVETO
-        g.drawPolygon(new int[]{plane.p1.x, plane.p2.x, plane.p3.x},new int[]{plane.p1.y, plane.p2.y, plane.p3.y}, 3);
-
+        plane.draw(g);
     }
 }
